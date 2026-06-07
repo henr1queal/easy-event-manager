@@ -71,7 +71,7 @@ Route::put('/atualizar-colaborador/{user}', 'UserController@update')->name('atua
 Route::delete('/deletar-colaborador/{user}', 'UserController@destroy')->name('deletar_colaborador')->middleware('checkPermission:deletar_colaborador');
 
 Route::get('/financeiro', 'FinancialController@index')->name('meu_financeiro')->middleware('checkPermission:meu_financeiro');
-Route::view('/atualizar-caixa', 'financial.financial-edit-converger-value')->name('atualizar_caixa')->middleware('checkPermission:atualizar_caixa');
+Route::view('/atualizar-caixa', 'financial.financial-edit-value')->name('atualizar_caixa')->middleware('checkPermission:atualizar_caixa');
 Route::post('/novo-valor-caixa', 'FinancialController@updateValue')->name('salvar_novo_valor')->middleware('checkPermission:salvar_novo_valor');
 Route::post('/nova-despesa', 'FinancialController@store')->name('salvar_nova_despesa')->middleware('checkPermission:salvar_nova_despesa');
 Route::post('/atualizar-status-despesa/{financial}', 'FinancialController@updateStatus')->name('atualizar_status_despesa')->middleware('checkPermission:atualizar_status_despesa');

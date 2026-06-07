@@ -1,7 +1,7 @@
 <x-guest-layout>
     <x-authentication-card>
         <x-slot name="logo">
-            <img src="./images/converger-logo.webp" alt="Converger" style="max-width: 150px;">
+            <img src="./images/logo.webp" alt="Converger" style="max-width: 150px;">
         </x-slot>
 
         <x-validation-errors class="mb-4" />
